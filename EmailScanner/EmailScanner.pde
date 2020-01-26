@@ -26,7 +26,7 @@ boolean lastMousePressed = false;
 
 void setup() {
   size(400, 800);
-  Font = createFont("ApexMk2-Regular.otf", 32);
+  Font = createFont("ApexMk2-Regular.otf", 50, true);
   textFont(Font);
 }
 
@@ -40,16 +40,16 @@ void draw() {
   //Title Box
   noStroke();
   fill (0, 0, 0, 20);
-  rect(0, 5, 200, 30);
+  rect(0, 5, 170, 35);
   //Title of the program at the top of the screen
   fill(255);
   textSize(33); 
   textAlign(LEFT, TOP);
-  text("SAFE-LINK", 10, 0);
+  text("SAFE-LINK", 10, 5);
 
-  //Title of the program at the top of the screen
+  //Text for Insert Link Here
   fill(255);
-  textSize(20); 
+  textSize(25); 
   textAlign(CENTER, TOP);
   text("INSERT LINK HERE", width/2, 100);
 
