@@ -13,8 +13,8 @@ class Button {
   int textSize;
   //Text alignment method for the text in button
   int textAlign;
-  //Radius of the button edges
-  int roundRadius;
+  //Radius of the button edges: Topleft, Topright, BottomRight and Bottomleft
+  int tlradius, trradius, brradius, blradius;
   //Text that will be displayed on the button
   String buttonText;
 
@@ -29,12 +29,15 @@ class Button {
   }
 
   //Constructor for the button that includes all the variables. Needs to be placed in the same order as shown below when constructing a button.
-  Button(int xPos, int yPos, int wSize, int hSize, int roundRadius, int strokeColor, int textColor, String buttonText, int textSize, int textAlign, int bRed, int bGreen, int bBlue) {
+  Button(int xPos, int yPos, int wSize, int hSize, int tlradius, int trradius, int brradius, int blradius, int strokeColor, int textColor, String buttonText, int textSize, int textAlign, int bRed, int bGreen, int bBlue) {
     this.xPos = xPos;
     this.yPos = yPos;
     this.wSize = wSize;
     this.hSize = hSize;
-    this.roundRadius = roundRadius;
+    this.tlradius = tlradius;
+    this.trradius = trradius;
+    this.brradius = brradius;
+    this.blradius = blradius;
     this.strokeColor = strokeColor;
     this.textColor = textColor;
     this.buttonText = buttonText;
@@ -49,7 +52,7 @@ class Button {
   void Update() {
     stroke(strokeColor);
     fill(bRed, bGreen, bBlue);
-    rect(xPos, yPos, wSize, hSize, roundRadius);
+    rect(xPos, yPos, wSize, hSize, tlradius, trradius, brradius, blradius);
     textSize(textSize);
     fill(textColor);
     if (textAlign == 0) {

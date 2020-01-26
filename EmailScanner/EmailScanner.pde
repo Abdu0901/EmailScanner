@@ -54,9 +54,10 @@ void draw() {
   text("INSERT LINK HERE", width/2, 100);
 
   //Insert Link Button
-  InsertLinkButton = new Button(25, 150, 350, 30, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  InsertLinkButton = new Button(25, 150, 350, 30, 10, 10, 10, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
   InsertLinkButton.Update();
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
   }
+  
 }
