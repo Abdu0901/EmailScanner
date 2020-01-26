@@ -11,6 +11,13 @@ int bRed = 180, bGreen = 178, bBlue = 200;
 
 //Define name of a button
 Button InsertLinkButton;
+Button EmailReportRow1Button;
+Button EmailReportRow2Button;
+Button EmailReportRow3Button;
+Button EmailReportRow4Button;
+Button EmailReportRow5Button;
+Button EmailReportRow6Button;
+Button EmailReportRow7Button;
 
 //Color of the box stroke
 int strokeColor = 0;
@@ -59,5 +66,59 @@ void draw() {
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
   }
-  
+
+  //Text for Email Report
+  fill(255);
+  textSize(25); 
+  textAlign(CENTER, TOP);
+  text("Email Report", width/2, 250);
+
+  //Email Report Row 1 Button
+  EmailReportRow1Button = new Button(25, 300, 350, 30, 10, 10, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow1Button.Update();
+  if (EmailReportRow1Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow1Button) == true) {
+    println("EmailReportRow1Button has been pressed");
+  }
+
+  //Email Report Row 2 Button
+  EmailReportRow2Button = new Button(25, 330, 350, 30, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow2Button.Update();
+  if (EmailReportRow2Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow2Button) == true) {
+    println("EmailReportRow2Button has been pressed");
+  }
+
+  //Email Report Row 3 Button
+  EmailReportRow3Button = new Button(25, 360, 350, 30, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow3Button.Update();
+  if (EmailReportRow3Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow3Button) == true) {
+    println("EmailReportRow3Button has been pressed");
+  }
+
+  //Email Report Row 4 Button
+  EmailReportRow4Button = new Button(25, 390, 350, 30, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow4Button.Update();
+  if (EmailReportRow4Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow4Button) == true) {
+    println("EmailReportRow4Button has been pressed");
+  }
+
+  //Email Report Row 5 Button
+  EmailReportRow5Button = new Button(25, 420, 350, 30,  0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow5Button.Update();
+  if (EmailReportRow5Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow5Button) == true) {
+    println("EmailReportRow5Button has been pressed");
+  }
+
+  //Email Report Row 6 Button
+  EmailReportRow6Button = new Button(25, 450, 350, 30,  0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow6Button.Update();
+  if (EmailReportRow6Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow6Button) == true) {
+    println("EmailReportRow6Button has been pressed");
+  }
+
+  //Email Report Row 7 Button
+  EmailReportRow7Button = new Button(25, 480, 350, 30,  0, 0, 10, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow7Button.Update();
+  if (EmailReportRow7Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow7Button) == true) {
+    println("EmailReportRow7Button has been pressed");
+  }
 }
