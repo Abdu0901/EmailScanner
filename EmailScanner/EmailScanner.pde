@@ -1,5 +1,8 @@
 //Abdullah and Max. EmailScanner project
 
+//Loads custom font into project
+PFont Font;
+
 //Colors of the background
 int bGRed = 44, bGGreen = 46, bGBlue = 66;
 
@@ -23,6 +26,8 @@ boolean lastMousePressed = false;
 
 void setup() {
   size(400, 800);
+  Font = createFont("ApexMk2-Regular.otf", 32);
+  textFont(Font);
 }
 
 void draw() {
