@@ -13,7 +13,10 @@ Button InsertLinkButton;
 int strokeColor = 0;
 
 //Color of text
-int textColor = 0;
+int textColor = 255;
+
+//Text that gets replaced with input from the user inside of the Insert Link Box
+String InsertLinkString = "";
 
 //Defining variables needed for button check
 boolean lastMousePressed = false;
@@ -39,8 +42,14 @@ void draw() {
   textAlign(LEFT, TOP);
   text("SAFE-LINK", 10, 0);
 
+  //Title of the program at the top of the screen
+  fill(255);
+  textSize(20); 
+  textAlign(CENTER, TOP);
+  text("INSERT LINK HERE", width/2, 100);
+
   //Insert Link Button
-  InsertLinkButton = new Button(100, 100, 200, 50, 10, strokeColor, textColor, "Insert Link here", 15, 0, bRed, bGreen, bBlue);
+  InsertLinkButton = new Button(25, 150, 350, 30, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
   InsertLinkButton.Update();
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
