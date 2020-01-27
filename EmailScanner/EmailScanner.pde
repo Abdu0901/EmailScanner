@@ -19,6 +19,16 @@ Button EmailReportRow5Button;
 Button EmailReportRow6Button;
 Button EmailReportRow7Button;
 Button DangerLevelButton;
+Button DangerLevelButton1;
+Button DangerLevelButton2;
+Button DangerLevelButton3;
+Button DangerLevelButton4;
+Button DangerLevelButton5;
+Button DangerLevelButton6;
+Button DangerLevelButton7;
+Button DangerLevelButton8;
+Button DangerLevelButton9;
+Button DangerLevelButton10;
 
 //Color of the box stroke
 int strokeColor = 0;
@@ -32,8 +42,6 @@ String InsertLinkString = "";
 //Defining variables needed for button check
 boolean lastMousePressed = false;
 
-//Color of the gradiant
-color c1, c2;
 
 //Variable for the y position of the Email Report Rows
 int YRRH = 300;
@@ -45,8 +53,6 @@ void setup() {
   size(400, 800);
   Font = createFont("ApexMk2-Regular.otf", 50, true);
   textFont(Font);
-  c1 = color(255, 0, 0);
-  c2 = color(0, 255, 0);
 }
 
 void draw() {
@@ -86,49 +92,49 @@ void draw() {
   text("Email Report", width/2, 250);
 
   //Email Report Row 1 Button
-  EmailReportRow1Button = new Button(25, YRRH, 350, RRH, 10, 10, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow1Button = new Button(25, YRRH, 350, RRH, 10, 10, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow1Button.Update();
   if (EmailReportRow1Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow1Button) == true) {
     println("EmailReportRow1Button has been pressed");
   }
 
   //Email Report Row 2 Button
-  EmailReportRow2Button = new Button(25, YRRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow2Button = new Button(25, YRRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow2Button.Update();
   if (EmailReportRow2Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow2Button) == true) {
     println("EmailReportRow2Button has been pressed");
   }
 
   //Email Report Row 3 Button
-  EmailReportRow3Button = new Button(25, YRRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow3Button = new Button(25, YRRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow3Button.Update();
   if (EmailReportRow3Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow3Button) == true) {
     println("EmailReportRow3Button has been pressed");
   }
 
   //Email Report Row 4 Button
-  EmailReportRow4Button = new Button(25, YRRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow4Button = new Button(25, YRRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow4Button.Update();
   if (EmailReportRow4Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow4Button) == true) {
     println("EmailReportRow4Button has been pressed");
   }
 
   //Email Report Row 5 Button
-  EmailReportRow5Button = new Button(25, YRRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow5Button = new Button(25, YRRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow5Button.Update();
   if (EmailReportRow5Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow5Button) == true) {
     println("EmailReportRow5Button has been pressed");
   }
 
   //Email Report Row 6 Button
-  EmailReportRow6Button = new Button(25, YRRH+RRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow6Button = new Button(25, YRRH+RRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 0, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow6Button.Update();
   if (EmailReportRow6Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow6Button) == true) {
     println("EmailReportRow6Button has been pressed");
   }
 
   //Email Report Row 7 Button
-  EmailReportRow7Button = new Button(25, YRRH+RRH+RRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 10, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  EmailReportRow7Button = new Button(25, YRRH+RRH+RRH+RRH+RRH+RRH+RRH, 350, RRH, 0, 0, 10, 10, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
   EmailReportRow7Button.Update();
   if (EmailReportRow7Button.isButtonPressed(mouseX, mouseY, mouseJustPressed, EmailReportRow7Button) == true) {
     println("EmailReportRow7Button has been pressed");
@@ -140,22 +146,73 @@ void draw() {
   textAlign(CENTER, TOP);
   text("Danger Level", width/2, 600);
 
-  //DangerLevel Button
-  DangerLevelButton = new Button(25, 650, 350, 30, 10, 10, 10, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
-  DangerLevelButton.Update();
-  if (DangerLevelButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton) == true) {
-    println("DangerLevelButton has been pressed");
+  //DangerLevel Button1
+  DangerLevelButton1 = new Button(25, 650, 35, 30, 10, 0, 0, 10, strokeColor, textColor, "1", 15, 0, 0, 200, 0);
+  DangerLevelButton1.Update();
+  if (DangerLevelButton1.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton1) == true) {
+    println("DangerLevelButton1 has been pressed");
   }
 
-  //Draws the Gradient Rectangle
-  setGradient(25, 650, 350, 30, c2, c1);
-}
+  //DangerLevel Button2
+  DangerLevelButton2 = new Button(60, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "2", 15, 0, 0, 200, 0);
+  DangerLevelButton2.Update();
+  if (DangerLevelButton2.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton2) == true) {
+    println("DangerLevelButton2 has been pressed");
+  }
 
-void setGradient(int x, int y, float w, float h, color c1, color c2) {
-  for (int i = x; i <= x+w; i++) {
-    float inter = map(i, x, x+w, 0, 1);
-    color c = lerpColor(c1, c2, inter);
-    stroke(c);
-    line(i, y, i, y+h);
+  //DangerLevel Button3
+  DangerLevelButton3 = new Button(95, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "3", 15, 0, 0, 200, 0);
+  DangerLevelButton3.Update();
+  if (DangerLevelButton3.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton3) == true) {
+    println("DangerLevelButton3 has been pressed");
+  }
+
+  //DangerLevel Button4
+  DangerLevelButton4 = new Button(130, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "4", 15, 0, 225, 225, 0);
+  DangerLevelButton4.Update();
+  if (DangerLevelButton4.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton4) == true) {
+    println("DangerLevelButton4 has been pressed");
+  }
+
+  //DangerLevel Button5
+  DangerLevelButton5 = new Button(165, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "5", 15, 0, 225, 225, 0);
+  DangerLevelButton5.Update();
+  if (DangerLevelButton5.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton5) == true) {
+    println("DangerLevelButton5 has been pressed");
+  }
+
+  //DangerLevel Button6
+  DangerLevelButton6 = new Button(200, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "6", 15, 0, 225, 150, 0);
+  DangerLevelButton6.Update();
+  if (DangerLevelButton6.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton6) == true) {
+    println("DangerLevelButton6 has been pressed");
+  }
+
+  //DangerLevel Button7
+  DangerLevelButton7 = new Button(235, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "7", 15, 0, 225, 150, 0);
+  DangerLevelButton7.Update();
+  if (DangerLevelButton7.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton7) == true) {
+    println("DangerLevelButton7 has been pressed");
+  }
+
+  //DangerLevel Button8
+  DangerLevelButton8 = new Button(270, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "8", 15, 0, 255, 0, 0);
+  DangerLevelButton8.Update();
+  if (DangerLevelButton8.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton8) == true) {
+    println("DangerLevelButton8 has been pressed");
+  }
+
+  //DangerLevel Button9
+  DangerLevelButton9 = new Button(305, 650, 35, 30, 0, 0, 0, 0, strokeColor, textColor, "9", 15, 0, 255, 0, 0);
+  DangerLevelButton9.Update();
+  if (DangerLevelButton9.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton9) == true) {
+    println("DangerLevelButton9 has been pressed");
+  }
+
+  //DangerLevel Button10
+  DangerLevelButton10 = new Button(340, 650, 35, 30, 0, 10, 10, 0, strokeColor, textColor, "10", 15, 0, 255, 0, 0);
+  DangerLevelButton10.Update();
+  if (DangerLevelButton10.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton10) == true) {
+    println("DangerLevelButton10 has been pressed");
   }
 }
