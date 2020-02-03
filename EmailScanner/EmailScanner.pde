@@ -36,12 +36,8 @@ int strokeColor = 0;
 //Color of text
 int textColor = 255;
 
-//Text that gets replaced with input from the user inside of the Insert Link Box
-String InsertLinkString = "";
-
 //Defining variables needed for button check
 boolean lastMousePressed = false;
-
 
 //Variable for the y position of the Email Report Rows
 int YRRH = 300;
@@ -83,6 +79,9 @@ void draw() {
   InsertLinkButton.Update();
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
+    RemoveBoxFocuses();
+    isInsertLinkButtonInFocus = true;
+    InsertLinkString = "";
   }
 
   //Text for Email Report
