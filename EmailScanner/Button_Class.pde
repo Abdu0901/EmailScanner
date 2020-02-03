@@ -63,7 +63,7 @@ class Button {
       text(buttonText, xPos + wSize, yPos + hSize/2);
     } else if (textAlign == 2) {
       textAlign(LEFT, CENTER);
-      text(buttonText, xPos, yPos + hSize/2);
+      text(buttonText, xPos+5, yPos + hSize/2);
     }
   }
 }
