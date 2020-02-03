@@ -5,7 +5,7 @@ String InsertLinkString = "";
 boolean isInsertLinkButtonInFocus = false;
 
 //The max amount of letters that can be inputtet
-int maxTextLength = 35;
+int maxTextLength = 25;
 
 //Used in keypressed function
 String stringLink = "";

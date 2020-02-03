@@ -9,8 +9,11 @@ int bGRed = 44, bGGreen = 46, bGBlue = 66;
 //Colors of the boxes/buttons
 int bRed = 180, bGreen = 178, bBlue = 200;
 
+PImage CheckMark;
+
 //Define name of a button
 Button InsertLinkButton;
+Button InsertLinkCheckButton;
 Button EmailReportRow1Button;
 Button EmailReportRow2Button;
 Button EmailReportRow3Button;
@@ -49,6 +52,7 @@ void setup() {
   size(400, 800);
   Font = createFont("ApexMk2-Regular.otf", 50, true);
   textFont(Font);
+  CheckMark = loadImage("CheckMark.png");
 }
 
 void draw() {
@@ -75,7 +79,7 @@ void draw() {
   text("INSERT LINK HERE", width/2, 100);
 
   //Insert Link Button
-  InsertLinkButton = new Button(25, 150, 350, 30, 10, 10, 10, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
+  InsertLinkButton = new Button(25, 150, 300, 30, 10, 0, 0, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
   InsertLinkButton.Update();
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
@@ -83,6 +87,17 @@ void draw() {
     isInsertLinkButtonInFocus = true;
     InsertLinkString = "";
   }
+
+  //Insert Link Check Button
+  InsertLinkCheckButton = new Button(325, 150, 50, 30, 0, 10, 10, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
+  InsertLinkCheckButton.Update();
+  if (InsertLinkCheckButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkCheckButton) == true) {
+    println("InsertLinkCheckButton has been pressed");
+  }
+  
+  //Adds picture of checkmark on the check button
+  CheckMark.resize(50, 30);
+  image(CheckMark, 325, 150);
 
   //Text for Email Report
   fill(255);
