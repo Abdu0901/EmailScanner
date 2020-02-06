@@ -87,6 +87,11 @@ void draw() {
     isInsertLinkButtonInFocus = true;
     InsertLinkString = "";
   }
+  
+  //Box with the background colors
+  fill(bGRed, bGGreen, bGBlue);
+  noStroke();
+  rect(350, 150, 50, 30);
 
   //Insert Link Check Button
   InsertLinkCheckButton = new Button(325, 150, 50, 30, 0, 10, 10, 0, strokeColor, textColor, "", 15, 2, bRed, bGreen, bBlue);
@@ -94,7 +99,7 @@ void draw() {
   if (InsertLinkCheckButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkCheckButton) == true) {
     println("InsertLinkCheckButton has been pressed");
   }
-  
+
   //Adds picture of checkmark on the check button
   CheckMark.resize(50, 30);
   image(CheckMark, 325, 150);
