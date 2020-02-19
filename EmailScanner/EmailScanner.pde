@@ -48,6 +48,8 @@ int YRRH = 300;
 //Variable for the height of the Email Report Rows
 int RRH = 30;
 
+String checkLinkString = "";
+
 void setup() {
   size(400, 800);
   Font = createFont("ApexMk2-Regular.otf", 50, true);
@@ -98,6 +100,8 @@ void draw() {
   InsertLinkCheckButton.Update();
   if (InsertLinkCheckButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkCheckButton) == true) {
     println("InsertLinkCheckButton has been pressed");
+    checkLinkString = stringLink;
+    println(checkLinkString);
   }
 
   //Adds picture of checkmark on the check button
