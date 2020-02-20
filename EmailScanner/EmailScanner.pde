@@ -82,14 +82,18 @@ void draw() {
 
   //Insert Link Button
   InsertLinkButton = new Button(25, 150, 300, 30, 10, 0, 0, 10, strokeColor, textColor, InsertLinkString, 15, 2, bRed, bGreen, bBlue);
-  InsertLinkButton.Update();
   if (InsertLinkButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, InsertLinkButton) == true) {
     println("InsertLinkButton has been pressed");
     RemoveBoxFocuses();
     isInsertLinkButtonInFocus = true;
     InsertLinkString = "";
   }
-  
+  //Checks if Dust2 is highlighted
+  if (isInsertLinkButtonInFocus == true) {
+    LinkButtonHighlighted();
+  }
+  InsertLinkButton.Update();
+
   //Box with the background colors
   fill(bGRed, bGGreen, bGBlue);
   noStroke();
@@ -102,6 +106,9 @@ void draw() {
     println("InsertLinkCheckButton has been pressed");
     checkLinkString = stringLink;
     println(checkLinkString);
+    stringLink =  InsertLinkString;
+    println(stringLink);
+    RemoveBoxFocuses();
   }
 
   //Adds picture of checkmark on the check button
@@ -238,4 +245,11 @@ void draw() {
   if (DangerLevelButton10.isButtonPressed(mouseX, mouseY, mouseJustPressed, DangerLevelButton10) == true) {
     println("DangerLevelButton10 has been pressed");
   }
+}
+
+//Changes button color to black when active
+void LinkButtonHighlighted() {
+  InsertLinkButton.bRed = 0;
+  InsertLinkButton.bGreen = 0;
+  InsertLinkButton.bBlue = 0;
 }
